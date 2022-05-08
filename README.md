@@ -44,8 +44,21 @@ We re-used the data structure and data loader from the original code -- EHRDatal
     * hf.trainEHRmodel.pth: actual trained model
     * hf.trainEHRmodel.st: state dictionary
 
-**Folder Organization**
-
+**Overview of Code Structure**
+* There are no special commands for each of these steps, just place the notebook on the correct folder structure (follow structure as outlined below) and then run step by step.
+* Preprocessing code: On the notebook these sections are labeled accordingly:
+    * 1. Load Dataset
+    * 2. Sample of dataset
+    * 3. Preprocess Data for Training
+* This is labeled as "1. Load Dataset 2. 3. Preprocess Data for Training" in the notebook
+* Training code: On the notebook these sections are labeled accordingly:
+    * 4. Train Recurrent Neural Network    
+* Pretrained model: We did not use any pretrained model
+* Evaluation/Table of Results: On the notebook these sections are labeled accordingly:
+    * 5. Results Recurrent Neural Network (LSTM and GRU)
+    * 5. Results RETAIN MODEL (RETAIN)
+    
+     
 **Data Structure**
 
 *  We followed the data structure used in the RETAIN. Encounters may include pharmacy, clinical and microbiology laboratory, admission, and billing information from affiliated patient care locations. All admissions, medication orders and dispensing, laboratory orders, and specimens are date and time stamped, providing a temporal relationship between treatment patterns and clinical information.These clinical data are mapped to the most common standards, for example, diagnoses and procedures are mapped to the International Classification of Diseases (ICD) codes, medimultications information include the national drug codes (NDCs), and laboratory tests are linked to their LOINIC codes.
