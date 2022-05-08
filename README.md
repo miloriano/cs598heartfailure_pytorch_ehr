@@ -58,7 +58,8 @@ We re-used the data structure and data loader from the original code -- EHRDatal
     * 5. Results Recurrent Neural Network (LSTM and GRU)
     * 5. Results RETAIN MODEL (RETAIN)
     
-     
+Information below are mostly from original Readme. We didn't think we need to update or changed anything since we have forked this repository here and the information below holds true.
+
 **Data Structure**
 
 *  We followed the data structure used in the RETAIN. Encounters may include pharmacy, clinical and microbiology laboratory, admission, and billing information from affiliated patient care locations. All admissions, medication orders and dispensing, laboratory orders, and specimens are date and time stamped, providing a temporal relationship between treatment patterns and clinical information.These clinical data are mapped to the most common standards, for example, diagnoses and procedures are mapped to the International Classification of Diseases (ICD) codes, medimultications information include the national drug codes (NDCs), and laboratory tests are linked to their LOINIC codes.
