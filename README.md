@@ -3,23 +3,19 @@
 
 **Overview**
 
-Although there are plenty of repos on vision and NLP models, there are very limited repos on EHR using deep learning that we can find. Here we open source our repo, implementing data preprocessing, data loading, and a zoo of common RNN models. The main goal is to lower the bar of entering this field for researchers. We are not claiming any state-of-the-art performance, though our models are quite competitive (a paper describing our work will be available soon).  
+We decide to go with the paper \textbf{Endpoint prediction of heart failure using electronic health records} \cite{chu_dong_huang_2020}. This work is trying to predict the endpoint of heart failure prediction using electronic health records using a Recurrent Neural Network with two different learning strategies – adversarial learning and multi-task learning.. Unlike other methods, instead of just using the endpoints as target variables the paper also predicts the patients’ feature vectors as an auxiliary task and uses that information to optimize the HF endpoint prediction.
 
-Based on existing works (e.g., Dr. AI and RETAIN), we represent electronic health records (EHRs) using the pickled list of list of list, which contain histories of patients' diagnoses, medications, and other various events. We integrated all relevant information of a patient's history, allowing easy subsetting.
+We reached out to fellow students who chose the same paper and was told they reached out to the authors and the Chinese Hospital since our classmate is Chinese and speaks their language, however the data retrieval was denied. As per approval from TA, we went ahead and got a comparable dataset from the public domain, which is where this forked data came from.
 
-Currently, this repo includes the following predictive models: Vanilla RNN, GRU, LSTM, Bidirectional RNN, Bidirectional GRU, Bidirectional LSTM, Dilated RNN, Dilated GRU, Dilated LSTM, QRNN,and T-LSTM to analyze and predict clinical performaces. Additionally we have tutorials comparing perfomance to plain LR, Random Forest. 
+We re-used the data structure and data loader from the original code -- EHRDataloader.py. We wrote our own notebooks namely the following:
+
+* CustomCode_Riano_Kalidas_RETAIN.ipynb
+* CustomCode_Riano_Kalidas_RNN_GRU.ipynb
+* CustomCode_Riano_Kalidas_RNN_LSTM.ipynb
 
 **Pipeline**
 
 ![pipeline](tutorials/Pipeline%20for%20data%20flow.png)
-
-
-**Primary Results**
-
-
-![Results Summary](tutorials/image.png)
-
-Note this result is over two prediction tasks: Heart Failure (HF) risk and Readmission. We showed simple gated RNNs (GRUs or LSTMs) consistently beat traditional MLs (logistic regression (LR) and Random Forest (RF)). All methods were tuned by Bayesian Optimization. All these are described  in this [paper](https://github.com/ZhiGroup/pytorch_ehr/blob/master/Medinfo2019_PA_SimpleRNNisAllweNeed.pdf).  
 
 
 **Folder Organization**
