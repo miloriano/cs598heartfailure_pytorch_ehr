@@ -19,6 +19,10 @@ We re-used the data structure and data loader from the original code -- EHRDatal
 
 
 **Folder Organization**
+* [ehr_pytorch](ehr_pytorch): same folder where we put our custom codes:
+    * CustomCode_Riano_Kalidas_RETAIN.ipynb: where we wrote the RETAIN model
+    * CustomCode_Riano_Kalidas_RNN_GRU.ipynb: where we wrote the RNN GRU model
+    * * CustomCode_Riano_Kalidas_RNN_LSTM.ipynb: where we wrote the RNN LSTM model
 * [ehr_pytorch](ehr_pytorch): main folder with modularized components:
     * EHREmb.py: EHR embeddings
     * EHRDataloader.py: a separate module to allow for creating batch preprocessed data with multiple functionalities including sorting on visit length and shuffle batches before feeding.
@@ -39,6 +43,8 @@ We re-used the data structure and data loader from the original code -- EHRDatal
     * hf.trainEHRmodel.log: examples of the output of the model
     * hf.trainEHRmodel.pth: actual trained model
     * hf.trainEHRmodel.st: state dictionary
+
+**Folder Organization**
 
 **Data Structure**
 
