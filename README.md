@@ -112,7 +112,9 @@ In the implementation, the medical codes are tokenized with a unified dictionary
 
 **Paper Reference**
 
-The [paper](https://github.com/ZhiGroup/pytorch_ehr/blob/master/Medinfo2019_PA_SimpleRNNisAllweNeed.pdf) upon which this repo was built. 
+Original Paper we are reproducing -- https://www.sciencedirect.com/science/article/pii/S1532046420301465?via%3Dihub
+
+The [paper](https://github.com/ZhiGroup/pytorch_ehr/blob/master/Medinfo2019_PA_SimpleRNNisAllweNeed.pdf) upon which this repo was built (https://github.com/ZhiGroup/pytorch_ehr/blob/master/Medinfo2019_PA_SimpleRNNisAllweNeed.pdf). 
 Code structure and data forked here -- https://github.com/ZhiGroup/pytorch_ehr
 
 **Versions**
