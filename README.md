@@ -87,7 +87,7 @@ We re-used the data structure and data loader from the original code -- EHRDatal
 **Table of Results**
 * ![alt text](https://github.com/miloriano/cs598heartfailure_pytorch_ehr/blob/master/results.JPG?raw=true) 
 
-Information below are mostly from original Readme. We didn't think we need to update or changed anything since we have forked this repository here and the information below holds true.
+Information below are mostly from original Readme, forked here -- https://github.com/ZhiGroup/pytorch_ehr. We didn't think we need to update or changed anything since we have forked this repository here and the information below holds true.
 
 **Data Structure**
 
