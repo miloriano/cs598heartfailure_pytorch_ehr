@@ -12,6 +12,7 @@ We re-used the data structure and data loader from the original code -- EHRDatal
 * CustomCode_Riano_Kalidas_RETAIN.ipynb
 * CustomCode_Riano_Kalidas_RNN_GRU.ipynb
 * CustomCode_Riano_Kalidas_RNN_LSTM.ipynb
+* CustomCode_Riano_Kalidas_RNN_LSTM_DAL.ipynb
 
 **Pipeline**
 
@@ -22,7 +23,8 @@ We re-used the data structure and data loader from the original code -- EHRDatal
 * [ehr_pytorch](ehr_pytorch): same folder where we put our custom codes:
     * CustomCode_Riano_Kalidas_RETAIN.ipynb: where we wrote the RETAIN model
     * CustomCode_Riano_Kalidas_RNN_GRU.ipynb: where we wrote the RNN GRU model
-    * * CustomCode_Riano_Kalidas_RNN_LSTM.ipynb: where we wrote the RNN LSTM model
+    * CustomCode_Riano_Kalidas_RNN_LSTM.ipynb: where we wrote the RNN LSTM model
+    * CustomCode_Riano_Kalidas_RNN_GRU_DAL.ipynb: where we wrote the advanced adversarial learning on top of GRU
 * [ehr_pytorch](ehr_pytorch): main folder with modularized components:
     * EHREmb.py: EHR embeddings
     * EHRDataloader.py: a separate module to allow for creating batch preprocessed data with multiple functionalities including sorting on visit length and shuffle batches before feeding.
@@ -44,8 +46,23 @@ We re-used the data structure and data loader from the original code -- EHRDatal
     * hf.trainEHRmodel.pth: actual trained model
     * hf.trainEHRmodel.st: state dictionary
 
+**Dependencies**
+
+* import torch
+* import torch.nn as nn
+* from torch.autograd import Variable
+* from torch import optim
+* import torch.nn.functional as F
+* from torch.utils.data import Dataset, DataLoader
+
+**Data Download Instruction**
+* download everything from this repository and upload "as is" to your juypter notebook. You should be able to run the codes.
+
+**Preprocessing code**
+* the preprocessing file can be found on the EHRDataLoader and on the custom code on #3. Preprocess Data for Training
+ 
 **Overview of Code Structure**
-* There are no special commands for each of these steps, just place the notebook on the correct folder structure (follow structure as outlined below) and then run step by step.
+* There are no special commands for each of these steps, just place the notebook on the correct folder structure (follow structure as outlined below) and then run step by step. The data is already in the proper place as outlined below, so make sure the folder structure is followed correctly, place the notebook on the specified path above and it should ran properly.
 * Preprocessing code: On the notebook these sections are labeled accordingly:
     * 1. Load Dataset
     * 2. Sample of dataset
@@ -57,7 +74,19 @@ We re-used the data structure and data loader from the original code -- EHRDatal
 * Evaluation/Table of Results: On the notebook these sections are labeled accordingly:
     * 5. Results Recurrent Neural Network (LSTM and GRU)
     * 5. Results RETAIN MODEL (RETAIN)
-    
+
+**Training code**
+* This is labeled accordingly in the jupyter notebook - 4. Train 
+
+**Evaluation code**
+* This is labeled accordingly in the jupyter notebook - 5. Results 
+
+**Pretrained code**
+* Not applicable, we didn't use pretrained
+
+**Table of Results**
+* 
+ 
 Information below are mostly from original Readme. We didn't think we need to update or changed anything since we have forked this repository here and the information below holds true.
 
 **Data Structure**
